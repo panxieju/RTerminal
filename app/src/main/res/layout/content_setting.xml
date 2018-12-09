@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="match_parent">
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_hint="选择设备厂家"
+            android:id="@+id/spinnerVendors"
+            app:ms_hide_arrow="true"
+            app:ms_hintTextSize="18sp"
+            app:ms_hintColor="@color/colorPrimaryDark"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"
+    >
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="波特率"/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerBaudrate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:ms_hide_arrow="true"
+                android:entries="@array/baud_rate"
+                android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="数据位"/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:ms_hide_arrow="true"
+                android:id="@+id/spinnerDatabits"
+                android:entries="@array/data_bits"
+                android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="停止位"/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:ms_hide_arrow="true"
+                android:id="@+id/spinnerStopbit"
+                android:entries="@array/stop_bits"
+                android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="校验位"/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:ms_hide_arrow="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerParity"
+                android:entries="@array/parity"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:layout_height="wrap_content"
+                android:text="硬件流控"/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="0dp"
+                app:ms_hide_arrow="true"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerFlowcontrol"
+                android:entries="@array/flow_control"
+        />
+
+    </LinearLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:textColor="@color/white"
+            android:id="@+id/buttonOk"
+            android:text="@string/ok"/>
+    <CheckBox
+            android:id="@+id/checkboxSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="10sp"
+            android:text="下次启动不修改串口设置"/>
+</LinearLayout>

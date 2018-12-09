@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command>
+    <mode name="normal">
+        <command>enable</command>
+        <command>quit</command>
+    </mode>
+    <mode name="privileged">
+        <command>show interface</command>
+        <command>show running-config</command>
+        <command>show startup-config</command>
+    </mode>
+
+</command>
+
